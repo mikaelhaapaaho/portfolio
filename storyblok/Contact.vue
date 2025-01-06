@@ -1,12 +1,12 @@
 <template>
   <section :id="blok.component" class="row p-2 mt-5">
     <h3 class="text-white ps-2 z-1">
-      <i class="bi bi-asterisk"></i> {{ blok.section }}
+      <i class="bi bi-asterisk text-primary"></i> {{ blok.section }}
     </h3>
     <div class="col-12 p-2">
       <div class="rounded-5 p-5 glass">
         <div class="text-white">
-          <h3>Let's be in contact. Send me a message:</h3>
+          <h3 v-html="heading"></h3>
           <div>
             [
             <a
@@ -35,4 +35,6 @@
 
 <script setup>
 const props = defineProps({ blok: Object })
+
+const heading = renderRichText(props.blok.heading)
 </script>

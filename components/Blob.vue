@@ -5,7 +5,7 @@
     <iframe
       src="https://my.spline.design/untitled-4cb747f63a2bd40796316c6002ee837c/"
       frameborder="0"
-      style="width: 120vw; height: 120vh"
+      style="width: 130vw; height: 130vh"
     ></iframe>
 
     <h1

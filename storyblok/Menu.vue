@@ -7,14 +7,7 @@
       class="w-100 h-100 rounded-5 d-flex justify-content-center align-items-center glass"
     >
       <div>
-        <a class="text-white fs-1 text-decoration-none d-block">Work</a>
-        <a href="#About" class="text-white fs-1 text-decoration-none d-block"
-          >About</a
-        >
-        <a href="" class="text-white fs-1 text-decoration-none d-block"
-          >Contact</a
-        >
-        <div class="d-flex align-items-center mt-5">
+        <div class="d-flex align-items-center">
           <i class="bi bi-globe text-white fs-2 me-3"></i>
           <div v-for="lang in availableLocales" :key="lang">
             <NuxtLink
@@ -26,14 +19,26 @@
           </div>
         </div>
         <div class="mt-5">
-          <a href="" target="_blank"
+          <a class="text-white fs-1 text-decoration-none d-block">Work</a>
+          <a href="#About" class="text-white fs-1 text-decoration-none d-block"
+            >About</a
+          >
+          <a href="" class="text-white fs-1 text-decoration-none d-block"
+            >Contact</a
+          >
+        </div>
+
+        <div class="mt-5">
+          <a
+            href="https://www.linkedin.com/in/mikael-haapa-aho/"
+            target="_blank"
             ><i class="bi bi-linkedin text-white display-5 me-4"></i
           ></a>
-          <a href="" target="_blank"
-            ><i class="bi bi-linkedin text-white display-5 me-4"></i
+          <a href="https://github.com/mikaelhaapaaho" target="_blank"
+            ><i class="bi bi-github text-white display-5 me-4"></i
           ></a>
-          <a href="" target="_blank"
-            ><i class="bi bi-instagram text-white display-5"></i
+          <a href="https://www.instagram.com/mikaho.music/" target="_blank"
+            ><i class="bi bi-instagram text-white display-5 me-4"></i
           ></a>
         </div>
       </div>
@@ -71,6 +76,8 @@
 </template>
 
 <script setup>
+const props = defineProps({ blok: Object })
+
 const localePath = useLocalePath()
 const { locale, locales } = useI18n()
 const switchLocalePath = useSwitchLocalePath()

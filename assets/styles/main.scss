@@ -1,8 +1,6 @@
 // bootstrap
 
-@import "../../node_modules/bootstrap/scss/bootstrap";
-
-$primary: #ff5733;
+$primary: #b10000;
 $secondary: #33c1ff;
 $success: #28a745;
 $info: #17a2b8;
@@ -10,6 +8,10 @@ $warning: #ffc107;
 $danger: #dc3545;
 $light: #bebcb7;
 $dark: #343a40;
+
+$progress-height: 1.5rem;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
 
 // fonts
 
