@@ -1,0 +1,54 @@
+// bootstrap
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+$primary: #ff5733;
+$secondary: #33c1ff;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #bebcb7;
+$dark: #343a40;
+
+// fonts
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap");
+
+.noto-sans-mono-200 {
+  font-family: "Noto Sans Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.libre-barcode-128-text-regular {
+  font-family: "Libre Barcode 128 Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+// custom
+
+body {
+  background-color: $light;
+  font-family: "Noto Sans Mono", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.glass {
+  background: linear-gradient(
+    301deg,
+    rgba(#fff, 0.2) 0%,
+    rgba(#9da38e, 0.2) 100%
+  );
+  backdrop-filter: blur(10px);
+  border-left: 0.15rem solid rgba(#fff, 0.4);
+  border-top: 0.15rem solid rgba(#fff, 0.3);
+  box-shadow: 0.2rem 0.2rem 0.2rem rgba(#000, 0.05);
+}
