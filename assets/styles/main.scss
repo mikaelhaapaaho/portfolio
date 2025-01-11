@@ -62,3 +62,13 @@ img {
   border-top: 0.15rem solid rgba(#fff, 0.3);
   box-shadow: 0.2rem 0.2rem 0.2rem rgba(#000, 0.05);
 }
+
+.display-big {
+  font-size: 8rem;
+}
+
+@media screen and (max-width: "768px") {
+  .display-big {
+    font-size: 4rem;
+  }
+}

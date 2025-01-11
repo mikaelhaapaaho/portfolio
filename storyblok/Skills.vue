@@ -9,7 +9,7 @@
         <i class="bi bi-asterisk text-primary"></i> {{ blok.section }}
       </h3>
       <div class="col-12 p-2">
-        <h3 class="rounded-5 p-5 text-white glass">
+        <h3 class="rounded-5 p-4 p-md-5 text-white glass">
           {{ blok.heading }}
         </h3>
       </div>
@@ -20,7 +20,7 @@
       />
       <div class="col-12 p-2">
         <div
-          class="rounded-5 p-5 h-100 d-flex flex-column-reverse text-white glass"
+          class="rounded-5 p-4 p-md-5 h-100 d-flex flex-column-reverse text-white glass"
         >
           {{ blok.tags }}
         </div>
