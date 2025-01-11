@@ -20,7 +20,7 @@
         </div>
         <div class="mt-5">
           <a class="text-white fs-1 text-decoration-none d-block">Work</a>
-          <a href="#About" class="text-white fs-1 text-decoration-none d-block"
+          <a href="#about" class="text-white fs-1 text-decoration-none d-block"
             >About</a
           >
           <a href="" class="text-white fs-1 text-decoration-none d-block"
@@ -56,23 +56,29 @@
     @click="toggleIcon"
     :class="rotationClass"
   >
-    <i :class="iconClass" class="bi bi-list display-4 text-white"></i>
+    <i :class="iconClass" class="bi bi-list display-5 text-white"></i>
   </div>
 
-  <!-- <i
-    class="bi bi-plus-lg position-fixed start-0 top-0 text-white display-4 mx-4 my-3"
-  ></i>
-  <i
-    class="bi bi-plus-lg position-fixed start-0 bottom-0 text-white display-4 mx-4 my-3"
-  ></i>
-  <i
-    class="bi bi-plus-lg position-fixed end-0 bottom-0 text-white display-4 mx-4 my-3"
-  ></i>
-  <div
-    class="position-fixed start-0 bottom-0 w-100 d-flex justify-content-center"
-  >
-    <i class="bi bi-caret-down text-white display-4 my-3"></i>
-  </div> -->
+  <div style="pointer-events: none">
+    <i
+      class="bi bi-plus-lg position-fixed start-0 top-0 text-white display-5 mx-4 my-3"
+    ></i>
+    <i
+      class="bi bi-plus-lg position-fixed start-0 bottom-0 text-white display-5 mx-4 my-3"
+    ></i>
+    <i
+      class="bi bi-plus-lg position-fixed end-0 bottom-0 text-white display-5 mx-4 my-3"
+    ></i>
+    <div
+      class="position-fixed start-0 bottom-0 w-100 d-flex justify-content-center"
+    >
+      <i
+        class="bi bi-caret-down text-white display-5 my-3"
+        @click="scrollToNextSection"
+        style="cursor: pointer; pointer-events: all"
+      ></i>
+    </div>
+  </div>
 </template>
 
 <script setup>

@@ -1,13 +1,13 @@
 // bootstrap
 
-$primary: #b10000;
+$primary: #bbb55e;
 $secondary: #33c1ff;
 $success: #28a745;
 $info: #17a2b8;
 $warning: #ffc107;
 $danger: #dc3545;
-$light: #bebcb7;
-$dark: #343a40;
+$light: #050f0f;
+$dark: #1a1a18;
 
 $progress-height: 1.5rem;
 
@@ -34,8 +34,12 @@ $progress-height: 1.5rem;
 
 // custom
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: $light;
+  background: linear-gradient(300deg, rgba($dark, 1) 0%, rgba($light, 1) 100%);
   font-family: "Noto Sans Mono", serif;
   font-optical-sizing: auto;
   font-weight: 200;
@@ -43,11 +47,15 @@ body {
   font-variation-settings: "wdth" 100;
 }
 
+img {
+  will-change: transform;
+}
+
 .glass {
   background: linear-gradient(
-    301deg,
-    rgba(#fff, 0.2) 0%,
-    rgba(#9da38e, 0.2) 100%
+    300deg,
+    rgba(#b9d8ff, 0.1) 0%,
+    rgba(#f7ffc9, 0.05) 100%
   );
   backdrop-filter: blur(10px);
   border-left: 0.15rem solid rgba(#fff, 0.4);

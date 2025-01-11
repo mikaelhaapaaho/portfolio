@@ -1,7 +1,6 @@
 <template>
   <Blob />
-  <div class="container">
-    <div class="vh-100"></div>
+  <div class="container pb-5">
     <StoryblokComponent
       v-for="blok in blok.sections"
       :key="blok._uid"
@@ -14,5 +13,3 @@
 <script setup>
 const props = defineProps({ blok: Object })
 </script>
-
-<style scoped></style>
