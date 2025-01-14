@@ -13,33 +13,26 @@
             <NuxtLink
               :to="switchLocalePath(lang)"
               class="text-uppercase text-white text-decoration-none p-2 fs-4"
+              :class="{ 'text-decoration-underline': lang === locale }"
             >
               {{ lang }}
             </NuxtLink>
           </div>
         </div>
         <div class="mt-5">
-          <a class="text-white fs-1 text-decoration-none d-block">Work</a>
-          <a href="#about" class="text-white fs-1 text-decoration-none d-block"
-            >About</a
-          >
-          <a href="" class="text-white fs-1 text-decoration-none d-block"
-            >Contact</a
-          >
+          <StoryblokComponent
+            v-for="blok in blok.links"
+            :key="blok._uid"
+            :blok="blok"
+          />
         </div>
-
         <div class="mt-5">
-          <a
-            href="https://www.linkedin.com/in/mikael-haapa-aho/"
-            target="_blank"
-            ><i class="bi bi-linkedin text-white display-5 me-4"></i
-          ></a>
-          <a href="https://github.com/mikaelhaapaaho" target="_blank"
-            ><i class="bi bi-github text-white display-5 me-4"></i
-          ></a>
-          <a href="https://www.instagram.com/mikaho.music/" target="_blank"
-            ><i class="bi bi-instagram text-white display-5 me-4"></i
-          ></a>
+          <StoryblokComponent
+            class="mt-5"
+            v-for="blok in blok.icons"
+            :key="blok._uid"
+            :blok="blok"
+          />
         </div>
       </div>
     </div>
@@ -57,28 +50,6 @@
     :class="rotationClass"
   >
     <i :class="iconClass" class="bi bi-list display-5 text-white"></i>
-  </div>
-
-  <div class="pe-none">
-    <!-- <i
-      class="bi bi-plus-lg position-fixed start-0 top-0 text-white display-5 mx-4 my-3"
-    ></i>
-    <i
-      class="bi bi-plus-lg position-fixed start-0 bottom-0 text-white display-5 mx-4 my-3"
-    ></i>
-    <i
-      class="bi bi-plus-lg position-fixed end-0 bottom-0 text-white display-5 mx-4 my-3"
-    ></i> -->
-    <div
-      class="position-fixed start-0 bottom-0 w-100 d-flex justify-content-center"
-    >
-      <i
-        id="scroller"
-        class="bi bi-caret-down text-white display-5 my-3 pe-auto"
-        @click="scrollToNextSection"
-        style="cursor: pointer"
-      ></i>
-    </div>
   </div>
 </template>
 
@@ -101,18 +72,6 @@ const rotationClass = computed(() => (isListIcon.value ? "rotate-0" : "rotate"))
 
 const toggleIcon = () => {
   isListIcon.value = !isListIcon.value
-}
-
-const scrollToNextSection = () => {
-  const sections = document.querySelectorAll("section")
-  const currentScroll = window.scrollY
-  for (let i = 0; i < sections.length; i++) {
-    const sectionTop = sections[i].offsetTop
-    if (sectionTop > currentScroll) {
-      sections[i].scrollIntoView({ behavior: "smooth" })
-      break
-    }
-  }
 }
 </script>
 

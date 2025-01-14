@@ -7,7 +7,6 @@
       :blok="blok"
     />
   </div>
-  <Menu />
 </template>
 
 <script setup>
