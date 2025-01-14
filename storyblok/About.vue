@@ -24,7 +24,7 @@
       <div class="col-6 col-md-3 p-2">
         <div class="rounded-5 p-4 p-md-5 h-100 d-flex align-items-end glass">
           <div>
-            <div class="text-white display-big">
+            <div class="text-white big-number">
               {{ years }}<span class="text-primary">+</span>
             </div>
             <div class="text-white">{{ blok.experience }}</div>
@@ -97,6 +97,6 @@ const years = computed(() => {
 }
 
 .rotate {
-  animation: rotate 10s linear infinite;
+  animation: rotate 20s linear infinite;
 }
 </style>

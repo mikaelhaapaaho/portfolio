@@ -3,10 +3,11 @@
     class="position-fixed vw-100 vh-100 d-flex justify-content-center align-items-center overflow-hidden"
   >
     <iframe
+      class="pe-none"
       ref="blob"
       src="https://my.spline.design/untitled-4cb747f63a2bd40796316c6002ee837c/"
       frameborder="0"
-      style="width: 130vw; height: 130vh; pointer-events: none"
+      style="width: 130vw; height: 130vh"
     ></iframe>
 
     <h1

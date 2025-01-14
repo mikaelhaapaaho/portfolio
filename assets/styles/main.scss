@@ -1,7 +1,7 @@
 // bootstrap
 
 $primary: #bbb55e;
-$secondary: #33c1ff;
+$secondary: #fff;
 $success: #28a745;
 $info: #17a2b8;
 $warning: #ffc107;
@@ -47,6 +47,10 @@ body {
   font-variation-settings: "wdth" 100;
 }
 
+p {
+  margin-bottom: 0;
+}
+
 img {
   will-change: transform;
 }
@@ -63,7 +67,7 @@ img {
   box-shadow: 0.2rem 0.2rem 0.2rem rgba(#000, 0.05);
 }
 
-.display-big {
+.big-number {
   font-size: 8rem;
 }
 

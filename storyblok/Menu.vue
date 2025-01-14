@@ -59,8 +59,8 @@
     <i :class="iconClass" class="bi bi-list display-5 text-white"></i>
   </div>
 
-  <div style="pointer-events: none">
-    <i
+  <div class="pe-none">
+    <!-- <i
       class="bi bi-plus-lg position-fixed start-0 top-0 text-white display-5 mx-4 my-3"
     ></i>
     <i
@@ -68,14 +68,15 @@
     ></i>
     <i
       class="bi bi-plus-lg position-fixed end-0 bottom-0 text-white display-5 mx-4 my-3"
-    ></i>
+    ></i> -->
     <div
       class="position-fixed start-0 bottom-0 w-100 d-flex justify-content-center"
     >
       <i
-        class="bi bi-caret-down text-white display-5 my-3"
+        id="scroller"
+        class="bi bi-caret-down text-white display-5 my-3 pe-auto"
         @click="scrollToNextSection"
-        style="cursor: pointer; pointer-events: all"
+        style="cursor: pointer"
       ></i>
     </div>
   </div>
@@ -100,6 +101,18 @@ const rotationClass = computed(() => (isListIcon.value ? "rotate-0" : "rotate"))
 
 const toggleIcon = () => {
   isListIcon.value = !isListIcon.value
+}
+
+const scrollToNextSection = () => {
+  const sections = document.querySelectorAll("section")
+  const currentScroll = window.scrollY
+  for (let i = 0; i < sections.length; i++) {
+    const sectionTop = sections[i].offsetTop
+    if (sectionTop > currentScroll) {
+      sections[i].scrollIntoView({ behavior: "smooth" })
+      break
+    }
+  }
 }
 </script>
 
