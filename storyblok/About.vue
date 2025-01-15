@@ -21,22 +21,22 @@
           <div v-html="introduction"></div>
         </div>
       </div>
-      <div class="col-6 col-md-3 p-2">
+      <div class="col-12 col-md-3 p-2">
         <div class="rounded-5 p-4 p-md-5 h-100 d-flex align-items-end glass">
-          <div>
-            <div class="text-white big-number">
+          <div class="row d-flex align-items-center">
+            <div class="col-5 col-md-12 text-white big-number">
               {{ years }}<span class="text-primary">+</span>
             </div>
-            <div class="text-white">{{ blok.experience }}</div>
+            <div class="col-7 col-md-12 text-white">{{ blok.experience }}</div>
           </div>
         </div>
       </div>
-      <div class="col-6 col-md-3 p-2">
+      <div class="col-12 col-md-3 p-2">
         <div
-          class="rounded-5 pt-2 pt-md-5 px-md-3 h-100 d-flex align-items-end overflow-hidden glass"
+          class="rounded-5 h-100 d-flex align-items-end overflow-hidden pt-2 pt-md-5 px-3 glass"
         >
           <i
-            class="bi bi bi-flower1 position-fixed end-0 top-0 text-white display-4 mx-3 mx-md-4 my-2 my-md-3 rotate"
+            class="bi bi bi-flower1 position-fixed end-0 top-0 text-white display-4 mx-4 mx-md-4 my-2 my-md-3 rotate"
           ></i>
           <img
             class="img-fluid"

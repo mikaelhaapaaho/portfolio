@@ -7,7 +7,7 @@
       <div class="col-12 p-2">
         <div class="rounded-5 p-4 p-md-5 glass">
           <div class="text-white">
-            <h3>{{ blok.heading }}</h3>
+            <h3 v-html="heading"></h3>
           </div>
         </div>
       </div>
@@ -39,4 +39,5 @@
 
 <script setup>
 const props = defineProps({ blok: Object })
+const heading = renderRichText(props.blok.heading)
 </script>

@@ -6,8 +6,8 @@ $success: #28a745;
 $info: #17a2b8;
 $warning: #ffc107;
 $danger: #dc3545;
-$light: #050f0f;
-$dark: #1a1a18;
+$light: #fff;
+$dark: #000;
 
 $progress-height: 1.5rem;
 
@@ -17,14 +17,6 @@ $progress-height: 1.5rem;
 
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Libre+Barcode+128+Text&display=swap");
-
-.noto-sans-mono-200 {
-  font-family: "Noto Sans Mono", serif;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
-}
 
 .libre-barcode-128-text-regular {
   font-family: "Libre Barcode 128 Text", serif;
@@ -39,7 +31,11 @@ html {
 }
 
 body {
-  background: linear-gradient(300deg, rgba($dark, 1) 0%, rgba($light, 1) 100%);
+  background: linear-gradient(
+    300deg,
+    rgba(#1a1a18, 1) 0%,
+    rgba(#050f0f, 1) 100%
+  );
   font-family: "Noto Sans Mono", serif;
   font-optical-sizing: auto;
   font-weight: 200;

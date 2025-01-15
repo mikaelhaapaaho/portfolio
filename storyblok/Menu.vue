@@ -1,7 +1,8 @@
 <template>
   <div
     id="menu"
-    class="collapse position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center p-2 z-2"
+    class="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center p-2 z-2"
+    :class="{ collapse: !isMenuOpen, show: isMenuOpen }"
   >
     <div
       class="w-100 h-100 rounded-5 d-flex justify-content-center align-items-center glass"
@@ -24,6 +25,7 @@
             v-for="blok in blok.links"
             :key="blok._uid"
             :blok="blok"
+            @click="closeMenu"
           />
         </div>
         <div class="mt-5">
@@ -65,6 +67,8 @@ const availableLocales = computed(() => {
 })
 
 const isListIcon = ref(true)
+const isMenuOpen = ref(true)
+
 const iconClass = computed(() =>
   isListIcon.value ? "bi-list" : "bi-plus-lg rotate"
 )
@@ -72,6 +76,12 @@ const rotationClass = computed(() => (isListIcon.value ? "rotate-0" : "rotate"))
 
 const toggleIcon = () => {
   isListIcon.value = !isListIcon.value
+  isMenuOpen.value = !isMenuOpen.value
+}
+
+const closeMenu = () => {
+  isMenuOpen.value = false
+  isListIcon.value = true
 }
 </script>
 
