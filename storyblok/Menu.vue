@@ -67,7 +67,7 @@ const availableLocales = computed(() => {
 })
 
 const isListIcon = ref(true)
-const isMenuOpen = ref(true)
+const isMenuOpen = ref(false)
 
 const iconClass = computed(() =>
   isListIcon.value ? "bi-list" : "bi-plus-lg rotate"

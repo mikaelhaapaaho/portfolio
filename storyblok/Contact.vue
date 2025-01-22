@@ -12,18 +12,18 @@
         </div>
       </div>
       <div class="col-12 col-md-6 p-2">
-        <div class="rounded-5 p-4 p-md-5 text-white text-center glass">
+        <div class="rounded-5 p-4 p-md-5 text-white text-center h-100 glass">
           <div class="mb-2"><i class="bi bi-envelope-fill fs-2"></i></div>
           <a
             class="text-white"
             href="mailto:mikael.haapa-aho@outlook.com"
             target="_blank"
-            >mikael.haapa-aho@outlook.com</a
+            >mikael.haapa-aho&#8203;@outlook.com</a
           >
         </div>
       </div>
       <div class="col-12 col-md-6 p-2">
-        <div class="rounded-5 p-4 p-md-5 text-white text-center glass">
+        <div class="rounded-5 p-4 p-md-5 text-white text-center h-100 glass">
           <div class="mb-2"><i class="bi bi-linkedin fs-2"></i></div>
           <a
             class="text-white"
@@ -31,6 +31,17 @@
             target="_blank"
             >LinkedIn</a
           >
+        </div>
+      </div>
+      <div class="col-12 p-2">
+        <div class="rounded-5 p-4 p-md-5 text-white glass">
+          <h3 class="mb-4">{{ blok.iconsHeading }}</h3>
+          <StoryblokComponent
+            class="mt-5"
+            v-for="blok in blok.icons"
+            :key="blok._uid"
+            :blok="blok"
+          />
         </div>
       </div>
     </div>

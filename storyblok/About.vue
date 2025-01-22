@@ -10,18 +10,18 @@
       </h3>
       <div class="col-12 p-2">
         <div class="rounded-5 p-4 p-md-5 glass">
-          <div class="display-1 text-white" v-html="title"></div>
+          <div class="display-3 text-white" v-html="title"></div>
           <div class="text-white mt-4">{{ blok.subheading }}</div>
         </div>
       </div>
-      <div class="col-12 col-md-6 p-2">
+      <div class="col-12 col-xl-6 p-2">
         <div
           class="rounded-5 p-4 p-md-5 h-100 text-white d-flex align-items-end glass"
         >
           <div v-html="introduction"></div>
         </div>
       </div>
-      <div class="col-12 col-md-3 p-2">
+      <div class="col-12 col-md-6 col-xl-3 p-2">
         <div class="rounded-5 p-4 p-md-5 h-100 d-flex align-items-end glass">
           <div class="row d-flex align-items-center">
             <div class="col-5 col-md-12 text-white big-number">
@@ -31,12 +31,12 @@
           </div>
         </div>
       </div>
-      <div class="col-12 col-md-3 p-2">
+      <div class="col-12 col-md-6 col-xl-3 p-2">
         <div
           class="rounded-5 h-100 d-flex align-items-end overflow-hidden pt-2 pt-md-5 px-3 glass"
         >
           <i
-            class="bi bi bi-flower1 position-fixed end-0 top-0 text-white display-4 mx-4 mx-md-4 my-2 my-md-3 rotate"
+            class="bi bi bi-flower1 position-fixed end-0 top-0 text-primary display-4 mx-4 mx-md-4 my-2 my-md-3 rotate"
           ></i>
           <img
             class="img-fluid"

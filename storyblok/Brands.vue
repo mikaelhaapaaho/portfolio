@@ -1,7 +1,7 @@
 <template>
   <div class="col-12 p-2">
     <div class="rounded-5 p-4 p-md-5 glass">
-      <div class="text-white">{{ blok.brandText }}</div>
+      <h3 class="text-white">{{ blok.brandText }}</h3>
       <div class="row">
         <div
           v-for="(logo, index) in blok.brandLogos"
